@@ -1,8 +1,8 @@
-import { Board, Button, Led } from 'johnny-five';
+import five from 'johnny-five';
 
-const board = new Board();
-const btn = new Button(15);
-const led = new Led(14)
+const board = new five.Board();
+const btn = new five.Button(15);
+const led = new five.Led(14);
 
 console.log('pins',board.pins)
 console.log('id',board.id)
