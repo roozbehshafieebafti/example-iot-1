@@ -1,11 +1,12 @@
 import five from 'johnny-five';
+import Raspi = require("raspi-io").RaspiIO;
+const board = new five.Board({
+    io: new Raspi
+});
 
-const board = new five.Board();
+board.on(('ready'),function(){
 
-board.on(('ready'),()=>{
-    
-    const btn = new five.Button(15);
-    const led = new five.Led(14);
+    const led = new five.Led("P1-15");
 
     console.log('pins',board.pins)
     console.log('id',board.id)
@@ -15,12 +16,7 @@ board.on(('ready'),()=>{
     console.log('port',board.port)
     
     console.log('------')
-    
-    console.log('downValue',btn.downValue)
-    console.log('holdtime',btn.holdtime)
-    console.log('id',btn.id)
-    console.log('pin',btn.pin)
-    console.log('upValue',btn.upValue)
+
     
     console.log('------')
     
