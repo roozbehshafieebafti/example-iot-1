@@ -1,0 +1,16 @@
+{
+  "name": "1-button",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/johnny-five": "^1.3.2",
+    "typescript": "^4.8.2"
+  },
+  "dependencies": {
+    "johnny-five": "^2.1.0"
+  }
+}
